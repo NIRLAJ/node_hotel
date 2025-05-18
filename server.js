@@ -49,6 +49,8 @@ import db from './db.js';
 import Person  from './models/Person.js';
 import bodyParser from 'body-parser'; 
 import Menu from './models/Menu.js';
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 const app = express();
@@ -127,7 +129,8 @@ import menuroutes from './routes/menuitems.js';
 app.use('/menu',menuroutes);
 
 app.use('/person',personroutes);
+const PORT=process.env.PORT || 4000;
 
-app.listen(4000, () => {
+app.listen(PORT, () => {
   console.log('Server is running on http://localhost:4000');
 });
