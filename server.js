@@ -129,8 +129,8 @@ import menuroutes from './routes/menuitems.js';
 app.use('/menu',menuroutes);
 
 app.use('/person',personroutes);
-const PORT=process.env.PORT || 4000;
+//const PORT=process.env.PORT || 4000;
 
-app.listen(PORT, () => {
+app.listen(4000, () => {
   console.log('Server is running on http://localhost:4000');
 });
